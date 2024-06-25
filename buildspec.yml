@@ -1,0 +1,17 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Instalando dependências
+      - yarn install
+  build:
+    commands:
+      - echo Build iniciado em `date`
+      - yarn build
+  post_build:
+    commands:
+      - echo Build finalizado em `date`
+artifacts:
+  files:
+    - build/**/*
+    - appsec.yml
